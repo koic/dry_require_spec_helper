@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 unless File.exist?('.rspec')
-  puts 'dry-require_spec_helper: .rspec: No such file or directory'
+  puts 'dry_require_spec_helper: .rspec: No such file or directory'
 
   exit 1
 end
