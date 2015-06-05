@@ -11,7 +11,7 @@ DRY (Don't Repeat Yourself) of `require 'spec_helper'`.
 
 ```
 > cd /path/to/dir         # recommended git repository
-> dry_require_spec_helper # immediate effect
+> dry_require_spec_helper # *** immediate effect ***
 ```
 
 ## REQUIREMENTS
