@@ -1,4 +1,4 @@
-File.open('.rspec', 'a') {|file| file.write('--require spec_helper') }
+File.open('.rspec', 'a') {|file| file.write("--require spec_helper\n") }
 
 Dir['./spec/**/*.rb'].each do |path|
   source = File.read(path)
