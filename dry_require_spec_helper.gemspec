@@ -6,7 +6,7 @@ require 'dry_require_spec_helper/version'
 
 Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
-  s.name = 'dry-require_spec_helper'
+  s.name = 'dry_require_spec_helper'
   s.summary = "DRY (Don't Repeat Yourself) of require 'spec_helper'."
   s.description = "DRY (Don't Repeat Yourself) of require 'spec_helper'."
 
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.authors = ['Koichi ITO']
   s.email = 'koic.ito@gmail.com'
-  s.homepage = 'http://github.com/koic/dry-require_spec_helper'
+  s.homepage = 'http://github.com/koic/dry_require_spec_helper'
 
   s.files = Dir[
     'bin/dry_require_spec_helper',

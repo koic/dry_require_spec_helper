@@ -1,4 +1,4 @@
-# dry-require_spec_helper
+# dry_require_spec_helper
 
 DRY (Don't Repeat Yourself) of `require 'spec_helper'`.
 
@@ -23,7 +23,7 @@ no requirements
 Add these lines to your application's Gemfile:
 
 ```
-gem 'dry-require_spec_helper'
+gem 'dry_require_spec_helper'
 ```
 
 And then execute:
@@ -35,7 +35,7 @@ $ bundle
 Or install it yourself as:
 
 ```
-$ gem install dry-require_spec_helper
+$ gem install dry_require_spec_helper
 ```
 
 ## LICENCE
