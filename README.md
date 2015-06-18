@@ -5,7 +5,7 @@ DRY (Don't Repeat Yourself) of `require 'spec_helper'`.
 ## FEATURES
 
 * append `--require spec_helper` to .rspec file.
-* remove `require 'spec_helper'` from spec files (i.e. `./spec/**/*.rb` in your current working directory) .
+* remove `require 'spec_helper'` from spec files (i.e. `./spec/**/*_spec.rb` in your current working directory) .
 
 ## HOW TO USE
 
