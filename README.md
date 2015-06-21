@@ -1,4 +1,4 @@
-# dry_require_spec_helper
+# dry_require_spec_helper [![Gem Version](https://badge.fury.io/rb/dry_require_spec_helper.svg)](http://badge.fury.io/rb/dry_require_spec_helper)
 
 DRY (Don't Repeat Yourself) of `require 'spec_helper'`.
 
