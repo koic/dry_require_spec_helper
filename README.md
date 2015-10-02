@@ -38,10 +38,6 @@ Or install it yourself as:
 $ gem install dry_require_spec_helper
 ```
 
-## LICENCE
-
-The MIT Licence
-
 ## Contributing
 
 1. Fork it
@@ -49,3 +45,7 @@ The MIT Licence
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+dry_require_spec_helper is released under the [MIT License](http://www.opensource.org/licenses/MIT).
