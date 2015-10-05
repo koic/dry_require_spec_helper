@@ -7,7 +7,7 @@ unless File.exist?('.rspec')
 end
 
 helper_name = if File.exist?('Gemfile.lock') &&
-  File.read('Gemfile.lock').split("\n").detect {|gem| /rspec-rails \((\d)\.(\d)\.(\d)\)$/ === gem } &&
+  File.read('Gemfile.lock').split("\n").detect {|gem| /rspec-rails \((\d)\.(\d)\.(\d)([0-9A-Za-z-]*)\)$/ === gem } &&
   $1.to_i >= 3
   'rails_helper'
 else
