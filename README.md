@@ -7,6 +7,12 @@ DRY (Don't Repeat Yourself) of `require 'spec_helper'`.
 * append `--require spec_helper` to .rspec file.
 * remove `require 'spec_helper'` from spec files (i.e. `./spec/**/*_spec.rb` in your current working directory) .
 
+### A little more in detail
+
+append `--require rails_helper` to .rspec file if rspec-rails >= 3.0.0 in Gemfile.lock.
+
+otherwise append `--require spec_helper` to .rspec file.
+
 ## HOW TO USE
 
 ```
