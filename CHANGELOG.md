@@ -1,3 +1,9 @@
+## 0.4.1
+
+support pre-release version of Semantic Versioning.
+
+e.g.) X.Y.Z-pre
+
 ## 0.4.0
 
 append `--require rails_helper` to .rspec file if rspec-rails >= 3.0.0 in Gemfile.lock.
