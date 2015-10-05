@@ -6,12 +6,20 @@ unless File.exist?('.rspec')
   exit 1
 end
 
-File.open('.rspec', 'a') {|file| file.write("--require spec_helper\n") }
+helper_name = if File.exist?('Gemfile.lock') &&
+  File.read('Gemfile.lock').split("\n").detect {|gem| /rspec-rails \((\d)\.(\d)\.(\d)\)$/ === gem } &&
+  $1.to_i >= 3
+  'rails_helper'
+else
+  'spec_helper'
+end
+
+File.open('.rspec', 'a') {|file| file.write("--require #{helper_name}\n") }
 
 Dir['./spec/**/*_spec.rb'].each do |path|
   source = File.read(path)
 
-  next unless /require +('spec_helper'|"spec_helper")\n*/ === source
+  next unless /require +('(spec|rails)_helper'|"(spec|rails)_helper")\n*/ === source
 
   source.gsub!($&, '')
 
