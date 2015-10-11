@@ -16,8 +16,8 @@ otherwise append `--require spec_helper` to .rspec file.
 ## HOW TO USE
 
 ```
-> cd /path/to/dir         # recommended git repository
-> dry_require_spec_helper # *** immediate effect ***
+$ cd /path/to/dir         # recommended git repository
+$ dry_require_spec_helper # *** immediate effect ***
 ```
 
 ## REQUIREMENTS
