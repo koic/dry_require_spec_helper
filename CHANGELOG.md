@@ -1,3 +1,7 @@
+## 0.4.2
+
+spec/rails_helper.rb file is required to select `--require rails_helper` option.
+
 ## 0.4.1
 
 support pre-release version of Semantic Versioning.
