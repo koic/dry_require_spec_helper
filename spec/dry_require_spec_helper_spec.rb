@@ -10,6 +10,9 @@ describe DryRequireSpecHelper do
   end
 
   describe '.dry' do
+    let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
+    let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
+
     before do
       DryRequireSpecHelper.dry("#{temporary_testing_path}/#{template_dirname}")
     end
@@ -18,14 +21,10 @@ describe DryRequireSpecHelper do
       let(:template_dirname) { 'without_rails_helper_rb' }
 
       describe '.rspec' do
-        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
-
         specify { expect(dried_dot_rspec).to eq "--color\n--require spec_helper\n" }
       end
 
       describe 'spec/hoge_spec.rb' do
-        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
-
         specify { expect(dried_spec_file).to eq '' }
       end
     end
@@ -34,14 +33,10 @@ describe DryRequireSpecHelper do
       let(:template_dirname) { 'dot_rspec_file_does_not_exist' }
 
       describe '.rspec' do
-        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
-
         specify { expect(dried_dot_rspec).to eq "--require spec_helper\n" }
       end
 
       describe 'spec/hoge_spec.rb' do
-        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
-
         specify { expect(dried_spec_file).to eq '' }
       end
     end
@@ -50,14 +45,10 @@ describe DryRequireSpecHelper do
       let(:template_dirname) { 'with_rails_helper_rb' }
 
       describe '.rspec' do
-        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
-
         specify { expect(dried_dot_rspec).to eq "--color\n--require rails_helper\n" }
       end
 
       describe 'spec/hoge_spec.rb' do
-        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
-
         specify { expect(dried_spec_file).to eq '' }
       end
     end
