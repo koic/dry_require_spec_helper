@@ -30,6 +30,22 @@ describe DryRequireSpecHelper do
       end
     end
 
+    context '.rspec file does not exist' do
+      let(:template_dirname) { 'dot_rspec_file_does_not_exist' }
+
+      describe '.rspec' do
+        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
+
+        specify { expect(dried_dot_rspec).to eq "--require spec_helper\n" }
+      end
+
+      describe 'spec/hoge_spec.rb' do
+        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
+
+        specify { expect(dried_spec_file).to eq '' }
+      end
+    end
+
     context 'with rails_helper.rb' do
       let(:template_dirname) { 'with_rails_helper_rb' }
 

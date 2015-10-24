@@ -6,10 +6,6 @@ module DryRequireSpecHelper
       @target = Pathname(target_path)
     end
 
-    def valid?
-      File.exist?(@target.join('.rspec'))
-    end
-
     def append_require_options
       helper_name = used_rails_helper? ? 'rails_helper' : 'spec_helper'
 
