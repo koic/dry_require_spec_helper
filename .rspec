@@ -1,2 +1,3 @@
 --color
+--exclude-pattern '**/fixtures/**/*_spec.rb'
 --require spec_helper
