@@ -17,7 +17,7 @@ module DryRequireSpecHelper
     end
 
     def remove_require_spec_helper
-      Dir[@target.join('./spec/**/*_spec.rb')].each do |path|
+      Dir[@target.join('spec/**/*_spec.rb')].each do |path|
         source = File.read(path)
 
         next unless /require +('(spec|rails)_helper'|"(spec|rails)_helper")\n*/ === source
