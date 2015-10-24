@@ -11,7 +11,7 @@ describe DryRequireSpecHelper do
 
   describe '.dry' do
     let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/.rspec") }
-    let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
+    let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/foo_spec.rb") }
 
     before do
       DryRequireSpecHelper.dry("#{temporary_testing_path}/#{template_dirname}")
@@ -24,7 +24,7 @@ describe DryRequireSpecHelper do
         specify { expect(dried_dot_rspec).to eq "--color\n--require spec_helper\n" }
       end
 
-      describe 'spec/hoge_spec.rb' do
+      describe 'spec/foo_spec.rb' do
         specify { expect(dried_spec_file).to eq '' }
       end
     end
@@ -36,7 +36,7 @@ describe DryRequireSpecHelper do
         specify { expect(dried_dot_rspec).to eq "--require spec_helper\n" }
       end
 
-      describe 'spec/hoge_spec.rb' do
+      describe 'spec/foo_spec.rb' do
         specify { expect(dried_spec_file).to eq '' }
       end
     end
@@ -48,7 +48,7 @@ describe DryRequireSpecHelper do
         specify { expect(dried_dot_rspec).to eq "--color\n--require rails_helper\n" }
       end
 
-      describe 'spec/hoge_spec.rb' do
+      describe 'spec/foo_spec.rb' do
         specify { expect(dried_spec_file).to eq '' }
       end
     end
