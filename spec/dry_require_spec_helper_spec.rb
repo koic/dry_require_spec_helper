@@ -24,9 +24,9 @@ describe DryRequireSpecHelper do
       end
 
       describe 'spec/hoge_spec.rb' do
-        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
+        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
 
-        specify { expect(dried_dot_rspec).to eq '' }
+        specify { expect(dried_spec_file).to eq '' }
       end
     end
 
@@ -40,9 +40,9 @@ describe DryRequireSpecHelper do
       end
 
       describe 'spec/hoge_spec.rb' do
-        let(:dried_dot_rspec) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
+        let(:dried_spec_file) { File.read("#{temporary_testing_path}/#{template_dirname}/spec/hoge_spec.rb") }
 
-        specify { expect(dried_dot_rspec).to eq '' }
+        specify { expect(dried_spec_file).to eq '' }
       end
     end
   end
