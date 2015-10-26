@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
+require 'dry_require_spec_helper'
+
 DryRequireSpecHelper.dry('.')
