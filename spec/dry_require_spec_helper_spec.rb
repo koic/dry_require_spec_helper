@@ -31,7 +31,17 @@ describe DryRequireSpecHelper do
       let(:template_dirname) { 'without_rails_helper_rb' }
       let(:content_of_dried_dot_rspec) { "--color\n--require spec_helper\n" }
 
-      it_behaves_like 'dried world'
+      context 'run dry_require_spec_helper once' do
+        it_behaves_like 'dried world'
+      end
+
+      context 'run dry_require_spec_helper twice' do
+        before do
+          DryRequireSpecHelper.dry("#{temporary_testing_path}/#{template_dirname}")
+        end
+
+        it_behaves_like 'dried world'
+      end
     end
 
     context '.rspec file does not exist' do

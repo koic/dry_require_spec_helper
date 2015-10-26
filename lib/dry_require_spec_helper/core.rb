@@ -9,6 +9,12 @@ module DryRequireSpecHelper
     def append_require_options
       helper_name = used_rails_helper? ? 'rails_helper' : 'spec_helper'
 
+      if File.exist?(@target.join('.rspec'))
+        lines = File.read(@target.join('.rspec'))
+
+        return if lines.split("\n").detect {|line| /--require +#{helper_name}/ === line }
+      end
+
       File.open(@target.join('.rspec'), 'a') {|file| file.write("--require #{helper_name}\n") }
     end
 
