@@ -4,7 +4,7 @@ describe DryRequireSpecHelper do
   let(:temporary_testing_path) { 'tmp' }
 
   before do
-    FileUtils.rm_r(temporary_testing_path)
+    FileUtils.rm_r(temporary_testing_path) if Dir.exist?(temporary_testing_path)
 
     FileUtils.cp_r('spec/fixtures', temporary_testing_path)
   end
