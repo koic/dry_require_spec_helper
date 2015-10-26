@@ -1,3 +1,8 @@
+## 0.4.3
+
+* Don't append require option if it already exist.
+* Make the .rspec file if it does NOT exist.
+
 ## 0.4.2
 
 spec/rails_helper.rb file is required to select `--require rails_helper` option.

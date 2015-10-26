@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dry_require_spec_helper (0.4.2)
+    dry_require_spec_helper (0.4.3)
 
 GEM
   remote: https://rubygems.org/
