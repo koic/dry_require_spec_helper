@@ -4,9 +4,9 @@ before_install:
 gemfile:
   - Gemfile
 rvm:
-  - 2.1
-  - 2.2
-  - 2.3.0
+  - 2.1.10
+  - 2.2.5
+  - 2.3.1
   - ruby-head
 script:
   - bundle exec rspec spec
