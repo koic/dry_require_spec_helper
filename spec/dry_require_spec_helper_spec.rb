@@ -57,5 +57,12 @@ describe DryRequireSpecHelper do
 
       it_behaves_like 'dried world'
     end
+
+    context 'with .rb extension' do
+      let(:template_dirname) { 'with_rb_extension' }
+      let(:content_of_dried_dot_rspec) { "--color\n--require spec_helper\n" }
+
+      it_behaves_like 'dried world'
+    end
   end
 end

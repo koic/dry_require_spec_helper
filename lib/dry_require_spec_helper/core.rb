@@ -22,7 +22,7 @@ module DryRequireSpecHelper
       Dir[@target.join('spec/**/*_spec.rb')].each do |path|
         source = File.read(path)
 
-        next unless /require +('(spec|rails)_helper'|"(spec|rails)_helper")\n*/ === source
+        next unless /require +('(spec|rails)_helper(\.rb)?'|"(spec|rails)_helper(\.rb)?")\n*/ === source
 
         source.gsub!($&, '')
 

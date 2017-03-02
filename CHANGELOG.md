@@ -1,3 +1,7 @@
+## Unreleased
+
+* Also targeted the `.rb` extension.
+
 ## 0.4.3
 
 * Don't append require option if it already exist.
