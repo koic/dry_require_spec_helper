@@ -1,4 +1,4 @@
-## Unreleased
+## 0.5.0 (2017-03-03)
 
 * Also targeted the `.rb` extension.
 
