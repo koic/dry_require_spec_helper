@@ -26,20 +26,6 @@ no requirements
 
 ## INSTALL
 
-Add these lines to your application's Gemfile:
-
-```
-gem 'dry_require_spec_helper'
-```
-
-And then execute:
-
-```
-$ bundle
-```
-
-Or install it yourself as:
-
 ```
 $ gem install dry_require_spec_helper
 ```
