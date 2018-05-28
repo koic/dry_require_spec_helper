@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.authors = ['Koichi ITO']
   s.email = 'koic.ito@gmail.com'
-  s.homepage = 'http://github.com/koic/dry_require_spec_helper'
+  s.homepage = 'https://github.com/koic/dry_require_spec_helper'
 
   s.files = Dir[
     'bin/dry_require_spec_helper',
